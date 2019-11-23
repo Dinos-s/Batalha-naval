@@ -11,7 +11,7 @@ public class test {
        
 
         IniciaPosicao(tabuleiro);
-        //posicaoDosSubmarinos();
+        //Sub();
         //posicaoDosDistroyers();
         //posicaoDosCruzadores();
         //posicaoDosNavios();
