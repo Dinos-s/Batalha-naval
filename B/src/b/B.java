@@ -155,12 +155,13 @@ static int submarino=0,destroyer=0,cruzador=0,portaviao=0;
 
     public static void gerarLog(File arquivo) {
       
-     PrintWriter arquivo = null;
+     PrintWriter arquivo = null;//Erro ñ sei pq! Uma ajuda pf; 
        try{
            FileWriter out = new FileWriter("Log.txt", true);
              arquivo = new PrintWriter(out); 
              while(){
-                 
+                 // da qui não segue nada;
+                  //adiantei só um pouco;
              }
        }catch(Exception e){
            System.out.println(e);
