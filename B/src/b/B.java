@@ -18,7 +18,14 @@ public class B {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       
+        tiros++;
+        Pacerto = (float) (certos * 100) / tiros;
+        Pagua = (float) (agua * 100) / tiros;
+        Prepitidos = (float) (repetidos * 100) / tiros;
+        Pinvalidos = (float) (invalidos * 100) / tiros;
         
+                
         File arquivo = new File("tabuleiro.txt");
         int[] embarcacoes = new int[11];
 
@@ -85,6 +92,8 @@ c. encosta em uma outra embarcação.
  // dentro de cada case vai obtendo numeros sobre os tiros
 static int tiros=0,agua=0,certos=0,repetidos=0,invalidos=0;
 static int submarino=0,destroyer=0,cruzador=0,portaviao=0;
+static  float Pacerto = 0, Pagua = 0, Prepitidos = 0, Pinvalidos = 0;
+        
         
     public static int atirar(int x,int y,int[] embarcacoes) {
         //        atirar em x e y
@@ -112,7 +121,6 @@ static int submarino=0,destroyer=0,cruzador=0,portaviao=0;
                 submarino++;
                 if (submarino==1){
                     System.out.println("Afundou um submarino");
-                    
                 }
                
                 break;
@@ -155,14 +163,13 @@ static int submarino=0,destroyer=0,cruzador=0,portaviao=0;
 
     public static void gerarLog(File arquivo) {
       
-     PrintWriter arquivo = null;//Erro ñ sei pq! Uma ajuda pf; 
+    PrintWriter arq = null;
        try{
            FileWriter out = new FileWriter("Log.txt", true);
-             arquivo = new PrintWriter(out); 
-             while(){
-                 // da qui não segue nada;
-                  //adiantei só um pouco;
-             }
+             arq = new PrintWriter(out); 
+             
+            
+             
        }catch(Exception e){
            System.out.println(e);
        } 
@@ -171,7 +178,7 @@ static int submarino=0,destroyer=0,cruzador=0,portaviao=0;
     public static void imprimirTabuleiro() {
          
         System.out.println("\t0\t1\t2\t3\t4\t5\t6\t7\t8\t9");
-        System.out.println("--------------------------------------");
+        System.out.println("\t-------------------------------------------------------------------------");
         for (int x = 0; x < 10; x++) {
             System.out.print(x);
             for (int y = 0; y < 10; y++) {
