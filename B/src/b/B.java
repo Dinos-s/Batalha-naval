@@ -25,7 +25,12 @@ public class B {
         Prepitidos = (float) (repetidos * 100) / tiros;
         Pinvalidos = (float) (invalidos * 100) / tiros;
         
-                
+        System.out.println(tiros + "tiros" ); 
+        System.out.println( df.format(Pagua) + "% água!");  
+        System.out.println(df.format(Pacerto) + "% acerto");   
+        System.out.println(df.format(Pinvalidos) + "% invalidos!");   
+        System.out.println(df.format(Prepitidos) + "% repitidos!");
+
         File arquivo = new File("tabuleiro.txt");
         int[] embarcacoes = new int[11];
 
@@ -168,7 +173,12 @@ static  float Pacerto = 0, Pagua = 0, Prepitidos = 0, Pinvalidos = 0;
            FileWriter out = new FileWriter("Log.txt", true);
              arq = new PrintWriter(out); 
              
-            
+            arq.println("Linha " + x);
+            arq.println("Coluna " + y);
+            arq.println("Acerto "+ Pacerto + "%");
+            arq.println("Acerto na água "+ Pagua + "%");
+            arq.println("Repitidos "+ Prepitidos + "%");
+            arq.println("invalidos " + Pinvalidos + "%");
              
        }catch(Exception e){
            System.out.println(e);
